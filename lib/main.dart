@@ -13,7 +13,10 @@ class _AppState extends State<App> {
   int counter = 0;
 
   void onClicked() {
-    counter = counter + 1;
+    setState(() {
+      // inform app to refresh state
+      counter = counter + 1;
+    });
   }
 
   @override
